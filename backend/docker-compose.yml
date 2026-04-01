@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    ports:
+      - "3340:3340"
+    volumes:
+      - ./app:/code/app
+      - ./data:/code/data # สำหรับเก็บไฟล์ SQLite ไม่ให้หายตอน container ดับ
